@@ -1,0 +1,16 @@
+<!-- <div class="bg"> -->
+
+    <div *ngFor="let item of forfaits | forfaitsVedettes">
+        <app-forfait-mini [(formulaire)]="formulaire" [(destination)]="destination" [forfait]='item'></app-forfait-mini>
+    </div> 
+    
+
+
+<hr>
+
+    <div class="center" *ngFor="let item of forfaits">
+        <app-forfait [(formulaire)]="formulaire" [(destination)]="destination" [forfait]="item"></app-forfait>
+    </div>
+<!-- </div>  -->
+
+

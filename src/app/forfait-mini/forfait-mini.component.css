@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/MONTSERRAT-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/MONTSERRAT-BOLD.TTF);
+}
+
+  .mini-h1{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Montserrat-Black';
+    color: rgb(25, 0, 66);
+    line-height: normal;
+  }
+
+  .mini-h2{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat-Black';
+    color: rgb(25, 0, 66);
+    line-height: normal;
+  }
+
+  .mini-p{
+    font-size: 10px;
+    font-family: 'Montserrat';
+    color: rgb(0, 0, 0);
+  }
+
+ .grid{
+    display: grid;
+    grid-auto-columns: 50px;
+} 
+
+.content {
+  padding: 16px;
+  height: auto;
+}
+
+.content > mat-card {
+  width: 200px;
+  height: auto;
+}
+
+.card{
+
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  background-color: rgb(223, 226, 230);
+  justify-content: space-between;
+  padding: auto;
+  margin: auto;
+}
+
+@media screen and (min-width: 40em) {
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .card {
+      flex: 0 1 calc(25% - 1em);
+  }
+}
+
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.padding{
+  margin: 0;
+  padding: 0;
+}

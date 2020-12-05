@@ -1,0 +1,61 @@
+<div class=' center m-5 p-5' fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="100%">
+    
+            <mat-card class='card mat-elevation-z4' fxFlex="100%">
+                <mat-card-header class="space">
+                    <div  *ngIf="forfait.forfaitVedette">
+                        <img mat-card-image src='../../assets/img/forfait-vedette.png'/>
+                    </div> 
+
+                <mat-card-title><h1>{{forfait.destination}}</h1></mat-card-title>
+  
+                </mat-card-header>
+
+                <img mat-card-image src={{forfait.photo}}/>
+    
+            <br>
+    
+                <mat-card-content><p>Ville de départ: {{forfait.villedepart}}</p>
+                <p>Date de départ: {{forfait.datedepart}}</p>
+                <p>Date de retour: {{forfait.dateretour}}</p></mat-card-content>
+    
+            <hr>
+
+                <mat-card-title><h2 class='titre'>Séjour à l'hôtel {{forfait.hotel.nomhotel}}</h2></mat-card-title>
+                <mat-card-subtitle><h3>Adresse: {{forfait.hotel.coordonnees}}</h3></mat-card-subtitle>
+            <br>
+                <mat-card-content>
+    
+    <div class='grid-container'>
+            <span class='grid-item style' *ngFor='let item of [].constructor(forfait.hotel.nbretoiles);'>
+            <app-etoile [forfait.hotel.nbretoiles]='item'></app-etoile></span>
+        </div>
+    <p>Nombre de chambres disponibles: {{forfait.hotel.nbrchambres}}</p>
+
+    <div>
+        <ul >
+            <li *ngFor="let item of forfait.hotel.caracteristiques">
+                <p><span>{{item}}</span></p>
+            </li>
+        </ul>
+    </div>
+
+
+<!-- <div [ngStyle]="{'text-decoration:line-through;'}"> -->
+    <div *ngIf="forfait.rabais > 0; else elseBlock">
+        <h1 class='barre'>{{forfait.prix}}$</h1>
+        <h1 class='rabais'>{{forfait.prix - forfait.rabais}}$</h1>
+        <h1 >Vous épargnez {{forfait.rabais}}$</h1>
+   
+    </div>
+
+    <ng-template #elseBlock><h1>{{forfait.prix}}$</h1></ng-template>
+
+    </mat-card-content>
+<!-- </div> -->
+
+</mat-card>
+</div> 
+</div> 
+
+

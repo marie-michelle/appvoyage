@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+ 
+    <button mat-mini-fab color="primary" type="button" mat-button (click)="drawer.toggle()" >
+      <mat-icon >menu</mat-icon>
+    </button>
+  
+  <span >FORFAITS VOYAGE </span>
+</mat-toolbar>
+
+
+<mat-drawer-container class="bg" >
+
+  <mat-drawer #drawer class="sidenav" mode="side">
+    
+    <app-formulaire-forfait [(formulaire)]="formulaire"></app-formulaire-forfait>
+  </mat-drawer>
+
+  <app-liste-forfait [(formulaire)]="formulaire"></app-liste-forfait>
+  <app-footer></app-footer>
+</mat-drawer-container>
+
+
