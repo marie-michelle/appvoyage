@@ -1,22 +1,23 @@
-<mat-toolbar color="primary">
- 
-    <button mat-mini-fab color="primary" type="button" mat-button (click)="drawer.toggle()" >
-      <mat-icon >menu</mat-icon>
-    </button>
-  
-  <span >FORFAITS VOYAGE </span>
+<app-header></app-header>
+
+
+<mat-toolbar>
+
+  <button mat-flat-button color="primary" type="button" mat-button (click)="drawer.toggle()">
+    Trouver un forfait
+  </button>
+
 </mat-toolbar>
 
-
-<mat-drawer-container class="bg" >
+<mat-drawer-container >
 
   <mat-drawer #drawer class="sidenav" mode="side">
-    
-    <app-formulaire-forfait [(formulaire)]="formulaire"></app-formulaire-forfait>
+
+<app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
   </mat-drawer>
 
-  <app-liste-forfait [(formulaire)]="formulaire"></app-liste-forfait>
-  <app-footer></app-footer>
+  <app-liste-forfait [forfait]="forfait" [formulaire]="formulaire"></app-liste-forfait>
+
 </mat-drawer-container>
 
 

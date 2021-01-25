@@ -37,3 +37,12 @@ mat-drawer-content {
   width: auto;
   height: auto;
 }
+
+.color-footer{
+  background-image:
+    linear-gradient(#0f0f0f, #141414);
+}
+
+.white {
+  color: #cccccc;
+}

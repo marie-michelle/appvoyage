@@ -10,16 +10,18 @@ export class AppComponent {
   title = 'app-voyages-marie-michelle';
 
   formulaire :Formulaire = { 
+    _id: 0,
+    villeDepart:'',
     destination: '',
-    depart: '',
+    dateDepart: '',
     hotel: '',
     coordonnee: '',
-    etoile: 0,
-    nbrChambre: 0,
-    // option: [''],
-    dateDepart: '',
+    nombreEtoiles: 0,
+    nombreChambres: 0,
     dateRetour: '',
     prix: 0,
+    vedette: false,
+    da: '',
 };
 
 }

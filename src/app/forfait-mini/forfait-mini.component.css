@@ -9,31 +9,31 @@
 }
 
   .mini-h1{
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Montserrat-Black';
-    color: rgb(25, 0, 66);
-    line-height: normal;
+    color: white;
+
   }
 
   .mini-h2{
     font-size: 12px;
     font-weight: bold;
     font-family: 'Montserrat-Black';
-    color: rgb(25, 0, 66);
+    color: white;
     line-height: normal;
   }
 
   .mini-p{
     font-size: 10px;
-    font-family: 'Montserrat';
-    color: rgb(0, 0, 0);
+    font-family: 'Montserrat-Black';
+    color: white;
   }
 
  .grid{
     display: grid;
     grid-auto-columns: 50px;
-} 
+}
 
 .content {
   padding: 16px;
@@ -41,18 +41,19 @@
 }
 
 .content > mat-card {
-  width: 200px;
+  width: auto;
   height: auto;
 }
 
 .card{
 
-  justify-content: center;
   width: auto;
   height: 100%;
-  background-color: rgb(223, 226, 230);
-  justify-content: space-between;
-  padding: auto;
+  background-color: #834fdd;
+  background-image:
+    linear-gradient(#834fdd, #5c24bb);
+  padding: 2em;
+  justify-content: center;
   margin: auto;
 }
 
@@ -68,9 +69,7 @@
   }
 }
 
-
 .center{
-  display: flex;
   align-items: center;
   justify-content: center;
 }

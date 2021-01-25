@@ -4,7 +4,7 @@ mat-drawer-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
 }
 
 .espace{
@@ -14,15 +14,8 @@ margin:1em;
 
 mat-toolbar {
   justify-content: space-between;
-  width:100%
-}
+  width:100%;
 
-.content {
-  padding: 16px;
-}
-
-.content > mat-card {
-  margin-bottom: 16px;
 }
 
 .nopadding{
@@ -44,8 +37,11 @@ height: auto;
   background-image: url('../../assets/img/bg-app-voyage.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #cccccc;
   background-size: cover;
   width: 100%;
   height: auto;
-} 
+}
+
+.mat-button, .mat-flat-button {
+  font-size: 75%;
+}

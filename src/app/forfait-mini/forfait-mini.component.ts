@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Forfait } from '../forfait';
+import {Formulaire} from '../formulaire';
+import {ForfaitService} from '../forfait.service';
 
 @Component({
   selector: 'app-forfait-mini',
@@ -8,10 +10,18 @@ import { Forfait } from '../forfait';
   styleUrls: ['./forfait-mini.component.css']
 })
 export class ForfaitMiniComponent implements OnInit {
-  @Input() forfait : Forfait;
+  forfaits: Forfait[] ;
+  // forfaits: Forfait[] = FORFAITS ;
+  @Input() forfait: Forfait;
+  @Input() formulaire: Formulaire;
+  constructor(private forfaitService: ForfaitService) { }
 
-  constructor() { }
 
   ngOnInit(): void {
+    this.getForfaits();
+  }
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+      .subscribe(resultat => this.forfaits = resultat);
   }
 }

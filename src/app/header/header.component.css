@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  padding: 30px;
+  width: 100%;
+}
+
+.header {
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.heading-primary{
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.heading-primary-sub{
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+
+}
+@media (max-width: 575.98px) {
+  header.home-hero video {
+    display: none;
+  }
+}
+
+header.home-hero {
+  position: relative;
+  height: 89vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header.home-hero .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.text-container {
+  background-image:
+    linear-gradient(#141414, #0f0f0f, #000);
+ padding: 2em;
+}
+
+.btn {
+  max-width: 250px;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+header.home-hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media (max-width: 575.98px) {
+  header.home-hero video {
+    display: none;
+  }
+}
+
+header.home-hero img.poster {
+  height: 100vh;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: bottom right;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn-outline-light{
+  color: #834fdd;
+  border-color: #834fdd;
+
+}
+.btn-outline-light:hover{
+  background-color: #834fdd;
+  color: #0f0f0f;
+
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
+}
+

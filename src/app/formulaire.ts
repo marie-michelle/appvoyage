@@ -1,12 +1,14 @@
 export interface Formulaire {
-    destination: string,
-    depart: string,
-    hotel: string,
-    coordonnee: string,
-    etoile: number,
-    nbrChambre: number,
-    // option: string[],
-    dateDepart: string,
-    dateRetour: string,
-    prix: number,
+    _id: number;
+    destination: string;
+    villeDepart: string;
+    hotel: string;
+    coordonnee: string;
+    nombreEtoiles: number;
+    nombreChambres: number;
+    dateDepart: string;
+    dateRetour: string;
+    prix: number;
+    vedette: boolean;
+    da: string;
 }
