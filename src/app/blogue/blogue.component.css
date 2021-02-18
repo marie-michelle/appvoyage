@@ -1,5 +1,36 @@
-.allignement{
-    padding: 2em;
-    margin: 4em;
-    background-color: beige;
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/MONTSERRAT-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/MONTSERRAT-BOLD.TTF);
+}
+
+
+.content > mat-card {
+  width: auto;
+  height: auto;
+}
+
+
+@media screen and (min-width: 40em) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
 }

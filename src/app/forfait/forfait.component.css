@@ -1,73 +1,66 @@
-.card{
-    background-color: rgb(223, 226, 230);
-  }
-
-.content { 
-  padding: 16px; 
-  width: 100%;
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/MONTSERRAT-REGULAR.TTF);
 }
 
-.content > mat-card { 
-  width: 100%; 
-  height: auto;
-}
-
-.center{
-  align-items: center;
-  justify-content: center;
-  padding: auto;
-  margin: auto;
-}
-
-.photo{
-  width: 100%;
-  height: auto;
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/MONTSERRAT-BOLD.TTF);
 }
 
 h1{
-  font-family: "Montserrat-Black";
-  font-size: 2em;
-  line-height: 1em;
-  color: rgb(39, 10, 92);
-  padding: auto;
-  margin: 1em;
-  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Montserrat-Black';
+  color: white;
 
 }
+
 h2{
-  font-family: "Montserrat-Black";
-  font-size: 17px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Montserrat-Black';
+  color: white;
   line-height: normal;
-  color: rgb(39, 10, 92);
-  margin: 1em;
+}
 
-}
-h3{
-  font-family: "Montserrat";
-  font-size: 16px;
-  color: rgb(65, 32, 128);
-}
 p{
-  font-family: "Montserrat";
-  font-size: 14px;
-  color: rgb(9, 6, 15);
+  font-size: 0.8rem;
+  font-family: 'Montserrat-Black';
+  color: white;
+}
+
+
+.card{
+  background-color: #834fdd;
+  background-image:
+    linear-gradient(#834fdd, #5c24bb);
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  padding: 2em;
+  margin: 1em;
+  justify-content: center;
 
 }
+
 
 .barre{
   text-decoration: line-through;
-  color: #f20b34;
+  color: rgb(30, 0, 65);
   font-weight: bold;
+  font-size: 2rem;
 }
 
 .rabais{
-  color: #256911;
+  color: #ffad87;
   font-weight: bold;
 }
 
 .paddingEtoiles{
-  padding: auto;
+  padding: 0.2rem;
 }
-.space{
-justify-content: space-between;
+
+.image-vedette{
+  filter: drop-shadow(0.1rem 0rem 0.2rem rgba(30, 0, 65, 0.5));
 }

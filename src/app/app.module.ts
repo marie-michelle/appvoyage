@@ -8,7 +8,6 @@ import { ForfaitComponent } from './forfait/forfait.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForfaitMiniComponent } from './forfait-mini/forfait-mini.component';
 import { EtoileComponent } from './etoile/etoile.component';
-import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { ForfaitsVedettesPipe } from './forfaits-vedettes.pipe';
@@ -31,6 +30,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
@@ -48,6 +48,13 @@ import { ForfaitRabaisComponent } from './forfait-rabais/forfait-rabais.componen
 import { ForfaitRabaisPipe } from './forfait-rabais.pipe';
 import { HeaderComponent } from './header/header.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
+import { DialogNewForfaitComponent } from './dialog-new-forfait/dialog-new-forfait.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
+import { ChartsModule } from 'ng2-charts';
+import { GraphiqueDestinationComponent } from './graphique-destination/graphique-destination.component';
+import { GraphiquePrixComponent } from './graphique-prix/graphique-prix.component';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +63,6 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
     ForfaitComponent,
     ForfaitMiniComponent,
     EtoileComponent,
-    FormulaireForfaitComponent,
     SidenavComponent,
     ForfaitsVedettesPipe,
     NbrEtoilesPipe,
@@ -71,7 +77,10 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
     ForfaitRabaisPipe,
     HeaderComponent,
     FormulaireRechercheComponent,
-
+    DialogNewForfaitComponent,
+    TableauDeBordComponent,
+    GraphiqueDestinationComponent,
+    GraphiquePrixComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,6 +106,9 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
     ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
+    MatDialogModule,
+    MatRadioModule,
+    ChartsModule,
   ],
   providers: [ForfaitService],
   bootstrap: [AppComponent]

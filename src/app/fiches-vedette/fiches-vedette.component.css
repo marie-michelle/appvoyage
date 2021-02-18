@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/MONTSERRAT-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/MONTSERRAT-BOLD.TTF);
+}
+
+.mini-h1{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat-Black';
+  color: white;
+
+}
+
+.mini-h2{
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Montserrat-Black';
+  color: white;
+  line-height: normal;
+}
+
+.mini-p{
+  font-size: 10px;
+  font-family: 'Montserrat-Black';
+  color: white;
+}
+
+.card {
+  width: 300px;
+}

@@ -5,3 +5,27 @@ table {
 .center {
   text-align: center;
 }
+
+.allignement{
+  padding: 2em;
+  margin: 4em;
+  background-image:
+    linear-gradient(#dfceff, #b191ee);
+  filter: drop-shadow(0.1rem 0rem 0.2rem rgba(30, 0, 65, 0.5));
+}
+
+.forfaitFormEdition { padding-left:24px; padding-right: 24px; }
+
+.input-full-width { width:100% }
+
+table { width: 100%; }
+
+.mat-column-nom { width:100%; }
+.mat-column-actions { min-width:90px !important; }
+
+.boutonsAction { padding:0}
+.boutonsAction form { display: inline-block; }
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}

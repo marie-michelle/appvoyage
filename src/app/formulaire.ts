@@ -1,5 +1,5 @@
 export interface Formulaire {
-    _id: number;
+    _id: string;
     destination: string;
     villeDepart: string;
     hotel: string;
@@ -10,5 +10,5 @@ export interface Formulaire {
     dateRetour: string;
     prix: number;
     vedette: boolean;
-    da: string;
+    duree: string,
 }

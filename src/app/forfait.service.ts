@@ -11,23 +11,23 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ForfaitService {
-  forfaitUrl = 'https://forfaits-voyages.herokuapp.com/api/forfaits/da/1996412/';
-  deleteForfaitUrl = 'https://forfaits-voyages.herokuapp.com/api/forfaits/';
+  forfaitUrl = 'https://forfaits-voyages.herokuapp.com/api/forfaits/';
+
   constructor(private http: HttpClient) { }
+
   getForfaits(): Observable<Forfait[]> {
-    return this.http.get<Forfait[]>(this.forfaitUrl);
-}
+    return this.http.get<Forfait[]>(this.forfaitUrl + 'da/1996412/');
+  }
+  addForfait(forfait: Forfait): Observable<Forfait> {
+    console.log(forfait);
+    return this.http.post<Forfait>(this.forfaitUrl, forfait, httpOptions);
+  }
 
-  addForfaits(forfaits: Forfait): Observable<Forfait[]> {
-    return this.http.post<Forfait[]>(this.forfaitUrl + 'forfaits', forfaits, httpOptions);
-}
-
-  updateForfaits(forfaits: Forfait): Observable<any> {
-const id = forfaits._id;
-return this.http.put<Forfait>(this.forfaitUrl + 'forfaits/' + id, forfaits, httpOptions);
-}
-
-deleteForfaits(id: string): Observable<Forfait> {
-return this.http.delete<Forfait>(this.forfaitUrl + 'forfaits/' + id, httpOptions);
-}
+  updateForfait(forfait: Forfait): Observable<any> {
+    const id = forfait._id;
+    return this.http.put<Forfait>(this.forfaitUrl +  id, forfait, httpOptions);
+  }
+  deleteForfait(id: string): Observable<Forfait> {
+    return this.http.delete<Forfait>(this.forfaitUrl + id, httpOptions);
+  }
 }

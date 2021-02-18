@@ -9,9 +9,9 @@ import { Formulaire } from './formulaire';
 export class AppComponent {
   title = 'app-voyages-marie-michelle';
 
-  formulaire :Formulaire = { 
-    _id: 0,
-    villeDepart:'',
+  formulaire: Formulaire = {
+    _id: null,
+    villeDepart: '',
     destination: '',
     dateDepart: '',
     hotel: '',
@@ -21,7 +21,7 @@ export class AppComponent {
     dateRetour: '',
     prix: 0,
     vedette: false,
-    da: '',
+    duree: '',
 };
 
 }

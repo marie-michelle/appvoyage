@@ -4,7 +4,7 @@
   <!-- DESTINATION -->
 
   <mat-form-field appearance="fill" class="margin form">
-    <mat-label>Destination</mat-label>
+    <mat-label for="ctrlDestination">Destination</mat-label>
     <input type=text matInput [matAutocomplete]="CompleteDestination" #valideDestination="ngModel" [(ngModel)]="recherche.destination" (ngModelChange)="changeDestination($event)" placeholder="Ex.: Angleterre" name="ctrlDestination" id="ctrlDestination" required>
     <mat-autocomplete #CompleteDestination="matAutocomplete">
       <mat-option value="Angleterre">Angleterre</mat-option>
@@ -34,7 +34,6 @@
     </mat-error>
 
   </mat-form-field>
-
   <br>
 
   <!-- DATE DE DÉPART -->
@@ -56,7 +55,7 @@
   </mat-form-field>
   <br>
 <!--  <app-caracteristiques [direction]="direction" [(caract)]="recherche.caracteristiques"></app-caracteristiques>-->
-  <br>
+
   <mat-label class="ml-2 pl-2">Nombre d'étoiles</mat-label><br>
   <mat-slider class="margin" thumbLabel tickInterval="1" min="1" max="5" [(ngModel)]="recherche.nombreEtoiles" (ngModelChange)="changeEtoiles($event)" required></mat-slider>
 

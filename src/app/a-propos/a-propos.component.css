@@ -1,5 +1,10 @@
-.allignement{
-    padding: 2em;
-    margin: 4em;
-    background-color: beige;
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
 }

@@ -15,7 +15,7 @@ export class FormulaireRechercheComponent implements OnInit {
 
   @Input() recherche: Recherche;
   @Output() rechercheChange = new EventEmitter();
-  @Input() caracteristiques: Array<Caracteristiques>;
+  @Input() caracteristiques: Caracteristiques[];
 
 
   changeDestination(nouvelleValeur) {

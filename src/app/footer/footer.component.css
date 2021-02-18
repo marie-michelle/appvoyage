@@ -41,6 +41,9 @@ mat-drawer-content {
 .color-footer{
   background-image:
     linear-gradient(#0f0f0f, #141414);
+  box-shadow:
+    inset .05em .05em 0 #834fdd,
+    inset 0 -.05em 0 #834fdd;
 }
 
 .white {

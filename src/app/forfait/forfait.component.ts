@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { FORFAITS } from '../mock-forfaits';
+// import { FORFAITS } from '../mock-forfaits';
 import { Forfait } from '../forfait';
 import { Formulaire } from '../formulaire';
 import { ForfaitService } from '../forfait.service';

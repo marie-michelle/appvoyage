@@ -1,0 +1,191 @@
+
+  <form id="forfaitFormAjout" #forfaitFormAjout="ngForm" name="forfaitAjout">
+  <div class="row">
+    <div class="col-6">
+
+      <!-- DESTINATION -->
+<h1>FORFAIT</h1>
+
+      <mat-form-field appearance="fill" class="">
+
+        <mat-label>Destination</mat-label>
+        <input type=text
+               required
+               minlength="2"
+               maxlength="50"
+               [(ngModel)]="newForfait.destination"
+               name="ajoutDestination"
+               matInput
+               #valideDestination="ngModel"
+               [ngModelOptions]="{standalone: true}"
+               placeholder="Ex.: Angleterre"
+               id="ajoutDestination"
+               >
+<!--        <mat-autocomplete #CompleteDestination="matAutocomplete">-->
+<!--          <mat-option value="Angleterre">Angleterre</mat-option>-->
+<!--          <mat-option value="Espagne">Espagne</mat-option>-->
+<!--          <mat-option value="Portugal">Portugal</mat-option>-->
+<!--        </mat-autocomplete>-->
+
+        <mat-error *ngIf="valideDestination.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+      </mat-form-field>
+
+<br>
+      <!-- VILLE DE DÉPART -->
+
+      <mat-form-field appearance="fill" class="">
+        <mat-label>Départ</mat-label>
+        <input type=text matInput
+               #ajoutDepart="ngModel"
+               [(ngModel)]="newForfait.villeDepart"
+               placeholder="Ex.: Montréal"
+               [ngModelOptions]="{standalone: true}"
+               name="ajoutDepart"
+               id="ajoutDepart"
+               required>
+<!--        <mat-autocomplete #CompleteDepart="matAutocomplete">-->
+<!--          <mat-option value="Montréal">Montréal</mat-option>-->
+<!--          <mat-option value="Québec">Québec</mat-option>-->
+<!--          <mat-option value="Ontario">Ontario</mat-option>-->
+<!--        </mat-autocomplete>-->
+
+        <mat-error *ngIf="ajoutDepart.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+
+      </mat-form-field>
+      <br>
+      <!-- DATE DÉPART -->
+
+      <mat-form-field color="accent" appearance="fill" class="">
+        <mat-label>Date de départ</mat-label>
+        <input matInput [matDatepicker]="picker1" [(ngModel)]="newForfait.dateDepart" #ajoutDateDepart="ngModel" name="ajoutDateDepart" [ngModelOptions]="{standalone: true}" required>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1 color="primary"></mat-datepicker>
+
+        <mat-error *ngIf="ajoutDateDepart.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <!-- DATE RETOUR -->
+
+      <mat-form-field color="accent" appearance="fill" class="">
+        <mat-label>Date de retour</mat-label>
+        <input matInput [matDatepicker]="picker2" #ajoutRetour="ngModel" [(ngModel)]="newForfait.dateRetour" name="ajoutDateRetour" required>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+      <br>
+      <!-- PRIX -->
+
+      <mat-form-field appearance="fill" class="" >
+        <mat-label>Prix</mat-label>
+        <input matInput type="number" min='0' [(ngModel)]="newForfait.prix" #ajoutPrix="ngModel" name="ajoutPrix" required>
+
+        <mat-error *ngIf="ajoutPrix.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+
+      <!-- RABAIS -->
+
+      <mat-form-field appearance="fill" class="" >
+        <mat-label>Rabais</mat-label>
+        <input matInput type="number" min='0' [(ngModel)]="newForfait.rabais" #ajoutRabais="ngModel" name="ajoutRabais" required>
+
+        <mat-error *ngIf="ajoutRabais.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+<!--      VEDETTE-->
+
+      <mat-radio-group aria-label="Vedette" [(ngModel)]="newForfait.vedette" #ajoutVedette="ngModel" name="ajoutVedette">
+        <mat-label>Forfait vedette</mat-label>
+        <mat-radio-button value=true>Oui</mat-radio-button>
+        <mat-radio-button value=false>Non</mat-radio-button>
+      </mat-radio-group>
+
+    </div>
+
+    <div class="col-6">
+      <!-- DESTINATION -->
+      <h1>HÔTEL</h1>
+      <!-- NOM DE L'HÔTEL -->
+
+      <mat-form-field appearance="fill" class="">
+        <mat-label>Hôtel</mat-label>
+        <input type=text matInput [matAutocomplete]="hotel" #ajoutHotel="ngModel" [(ngModel)]="newForfait.hotel.nom" [ngModelOptions]="{standalone: true}" placeholder="Ex.: Hôtel 1" name="ajoutHotel" id="ajoutHotel" required>
+        <mat-autocomplete #hotel="matAutocomplete">
+          <mat-option value="Hôtel 1">Hôtel 1</mat-option>
+          <mat-option value="Hôtel 2">Hôtel 2</mat-option>
+          <mat-option value="Hôtel 3">Hôtel 3</mat-option>
+        </mat-autocomplete>
+
+        <mat-error *ngIf="ajoutHotel.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+
+      </mat-form-field>
+      <br>
+      <!-- COORDONNEES -->
+
+      <mat-form-field appearance="fill" class="">
+        <mat-label>Coordonnées</mat-label>
+        <input type=text matInput [matAutocomplete]="coordonnees" #ajoutCoordonnee="ngModel" [(ngModel)]="newForfait.hotel.coordonnees" [ngModelOptions]="{standalone: true}" placeholder="Ex.: Adresse 1" name="ajoutCoordonnees" id="ajoutCoordonnees" required>
+        <mat-autocomplete #coordonnees="matAutocomplete">
+          <mat-option value="Adresse 1">Adresse 1</mat-option>
+          <mat-option value="Adresse 2">Adresse 2</mat-option>
+          <mat-option value="Adresse 3">Adresse 3</mat-option>
+        </mat-autocomplete>
+
+        <mat-error *ngIf="ajoutCoordonnee.hasError('required')">
+          Le champ est <strong>obligatoire</strong>
+        </mat-error>
+
+      </mat-form-field>
+      <br>
+      <!-- ÉTOILES -->
+
+      <mat-slider class="margin" thumbLabel tickInterval="1" min="1" max="5" [(ngModel)]="newForfait.hotel.nombreEtoiles" #ajoutEtoiles="ngModel" name="ajoutEtoiles" id="ajoutEtoiles" required></mat-slider>
+      <br>
+      <!-- CHAMBRES -->
+
+      <mat-form-field appearance="fill" class="">
+
+        <mat-label>Nombre de chambres</mat-label>
+        <input type="number" min="1" matInput placeholder="Ex.: 1" [(ngModel)]="newForfait.hotel.nombreChambres" #ajoutNbrChambres="ngModel"  name="ajoutChambres" id="ajoutChambres" value="1" required>
+
+      </mat-form-field>
+      <br>
+      <!--  OPTIONS -->
+      <!--<div class="col-6">-->
+      <h3 class="">Options</h3>
+      <section class='section'>
+        <mat-checkbox value="proximiteParc" class='margin'>Proximité d'un espace vert</mat-checkbox>
+        <mat-checkbox value="facePlage" class='margin'>Face à la plage</mat-checkbox>
+        <mat-checkbox value="mariage" class='margin'>Mariage</mat-checkbox>
+        <mat-checkbox value="ascenceur" class='margin'>Ascenceur</mat-checkbox>
+        <mat-checkbox value="miniclub" class='margin'>Miniclub</mat-checkbox>
+        <mat-checkbox value="accesPlage" class='margin'>Accès à la plage</mat-checkbox>
+        <mat-checkbox value="dejeuner" class='margin'>Déjeuner inclu</mat-checkbox>
+        <mat-checkbox value="boutique" class='margin'>Boutique cadeau</mat-checkbox>
+        <mat-checkbox value="buandrie" class='margin'>Buandrie</mat-checkbox>
+        <mat-checkbox value="centreCongres" class='margin'>Centre des congrès</mat-checkbox>
+        <mat-checkbox value="spa" class='margin'>Spa</mat-checkbox>
+        <mat-checkbox value="centreConditionnement" class='margin'>Centre de conditionnement</mat-checkbox>
+      </section>
+    </div>
+
+  <div mat-dialog-actions>
+
+    <button mat-raised-button color="primary" (click)="onAnnulerClick()" class="m-1">Annuler</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="newForfait" class="m-1">Ok</button>
+
+  </div>
+</div>
+</form>

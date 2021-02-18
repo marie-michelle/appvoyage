@@ -7,13 +7,18 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    position: relative;
     align-items: center;
-    height: 100%;
+    height: auto;
     width: 100%;
 
 }
-
+.allignement{
+  padding: 2em;
+  margin: 4em;
+  background-image:
+    linear-gradient(#dfceff, #b191ee);
+  filter: drop-shadow(0.1rem 0rem 0.2rem rgba(30, 0, 65, 0.5));
+}
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
