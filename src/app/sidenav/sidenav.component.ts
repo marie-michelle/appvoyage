@@ -21,7 +21,8 @@ export class SidenavComponent implements OnInit {
     dateDepart: null,
     dateRetour: null,
     caracteristiques: [],
-    nombreEtoiles: null};
+    nombreEtoiles: null
+  };
 
   constructor(private forfaitService: ForfaitService) { }
 

@@ -1,9 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-// import { FORFAITS } from '../mock-forfaits';
-import { Forfait } from '../forfait';
-import { Formulaire } from '../formulaire';
-import { ForfaitService } from '../forfait.service';
-
+import {Component, Input, OnInit} from '@angular/core';
+import {Forfait} from '../forfait';
+import {Formulaire} from '../formulaire';
+import {ForfaitService} from '../forfait.service';
 
 @Component({
   selector: 'app-forfaits-vedettes',
@@ -11,12 +9,11 @@ import { ForfaitService } from '../forfait.service';
   styleUrls: ['./forfaits-vedettes.component.css']
 })
 export class ForfaitsVedettesComponent implements OnInit {
+
   forfaits: Forfait[] ;
-  // forfaits: Forfait[] = FORFAITS ;
   @Input() forfait: Forfait;
   @Input() formulaire: Formulaire;
   constructor(private forfaitService: ForfaitService) { }
-
 
   ngOnInit(): void {
     this.getForfaits();

@@ -51,6 +51,7 @@ export class AdministrationComponent implements OnInit {
       vedette: false,
       rabais: 0,
       duree: '',
+      da: '1996412',
     };
     this.getForfaits();
   }
@@ -82,7 +83,7 @@ export class AdministrationComponent implements OnInit {
         console.log(this.newForfait);
         this.forfaitService.addForfait(this.newForfait)
           .subscribe(forfait => {
-          this.forfaits.push(forfait);
+          this.mesForfaits.push(forfait);
           this.newForfait._id = null;
           this.newForfait.destination = '';
           this.newForfait.villeDepart = '';
@@ -95,6 +96,7 @@ export class AdministrationComponent implements OnInit {
           this.newForfait.hotel.coordonnees = '';
           this.newForfait.hotel.nombreEtoiles = 0;
           this.newForfait.hotel.nombreChambres = 0;
+          this.newForfait.da =  '1996412';
           this.table.renderRows();
         });
       }

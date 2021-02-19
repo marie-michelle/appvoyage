@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Forfait } from '../../src/app/forfait';
+import { Forfait } from './forfait';
 
 @Pipe({
   name: 'forfaitsVedettes'
@@ -7,7 +7,7 @@ import { Forfait } from '../../src/app/forfait';
 export class ForfaitsVedettesPipe implements PipeTransform {
 
   transform(forfaits: Forfait[] ): Forfait[] {
-    return forfaits.filter(forfait => forfait.vedette === true);
+    return forfaits.filter(forfait => forfait.vedette === false);
   }
 
 }

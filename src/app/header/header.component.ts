@@ -11,7 +11,7 @@ import { ForfaitService } from '../forfait.service';
 })
 export class HeaderComponent implements OnInit {
 
-  forfaits: Forfait[] ;
+  mesForfaits: Forfait[] ;
   // forfaits: Forfait[] = FORFAITS ;
   @Input() forfait: Forfait;
   @Input() formulaire: Formulaire;
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
   getForfaits(): void {
     this.forfaitService.getForfaits()
-      .subscribe(resultat => this.forfaits = resultat);
+      .subscribe(resultat => this.mesForfaits = resultat);
   }
 
 }

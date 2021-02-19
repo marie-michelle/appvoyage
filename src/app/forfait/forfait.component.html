@@ -1,29 +1,29 @@
 <div class='center' >
 
-            <mat-card class='card '>
+            <mat-card class='card'>
                 <mat-card-header class="space">
                     <div  *ngIf="forfait.vedette">
-                        <img mat-card-image src='../../assets/img/forfait-vedette.png' class="image-vedette"/>
+                        <img mat-card-image src='/assets/img/forfait-vedette.png' class="image-vedette"/>
                     </div>
 
-                <mat-card-title><h1>{{forfait.destination}}</h1></mat-card-title>
+                <mat-card-title><h1>{{forfait.destination}}</h1> </mat-card-title>
 
                 </mat-card-header>
 
 
             <br>
 
-                <mat-card-content><p>Ville de départ: {{forfait.villeDepart}}</p>
+                <mat-card-content class=""><p>Ville de départ: {{forfait.villeDepart}}</p>
                 <p>Date de départ: {{forfait.dateDepart}}</p>
                 <p>Date de retour: {{forfait.dateRetour}}</p></mat-card-content>
-
             <hr>
 
                 <mat-card-title><h2 class='titre'>Séjour à l'hôtel {{forfait.hotel.nom}}</h2></mat-card-title>
                 <mat-card-subtitle><h3>Adresse: {{forfait.hotel.coordonnees}}</h3></mat-card-subtitle>
             <br>
                 <mat-card-content>
-
+                  <div class="row">
+<div class='flex-column'>
     <div class='grid-container'>
             <span class='grid-item style' *ngFor='let item of [].constructor(forfait.hotel.nombreEtoiles);'>
             <app-etoile [forfait.hotel.nombreEtoiles]='item'></app-etoile></span>
@@ -48,7 +48,9 @@
     </div>
 
     <ng-template #elseBlock><h1>{{forfait.prix}}$</h1></ng-template>
+</div>
 
+                  </div>
     </mat-card-content>
 <!-- </div> -->
 

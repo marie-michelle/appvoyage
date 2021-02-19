@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Forfait } from '../../src/app/forfait';
+import { Forfait } from './forfait';
 
 @Pipe({
   name: 'forfaitRabais'

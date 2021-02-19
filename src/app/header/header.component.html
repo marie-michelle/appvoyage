@@ -35,9 +35,8 @@
 </div>
 
   <div class="row">
-    <div class="col" *ngFor="let item of forfaits | forfaitsVedettes">
-
-      <app-forfait-mini [formulaire]="formulaire" [forfait]='item'></app-forfait-mini>
+    <div class="col" *ngFor="let item of mesForfaits | forfaitsVedettes">
+      <app-forfait-mini [forfait]='item'></app-forfait-mini>
 
     </div>
   </div>
