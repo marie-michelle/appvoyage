@@ -11,13 +11,13 @@
 
 <mat-drawer-container >
 
-  <mat-drawer #drawer class="sidenav" mode="side">
+  <mat-drawer #drawer class="sidenav height" mode="side">
 
-<app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
+<app-formulaire-recherche [(recherche)]="recherche " ></app-formulaire-recherche>
   </mat-drawer>
-
-  <app-liste-forfait [forfait]="forfait" [formulaire]="formulaire"></app-liste-forfait>
-
+  <div class="col-8 offset-2 col-md-10 offset-md-1 col-sm-12 col-xs-12 pt-4 mt-4" >
+  <app-liste-forfait [forfait]="forfait" [formulaire]="formulaire" [recherche]="recherche"></app-liste-forfait>
+  </div>
 </mat-drawer-container>
 
 

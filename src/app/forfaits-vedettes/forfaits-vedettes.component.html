@@ -1,11 +1,13 @@
-<h1>Forfaits vedettes</h1>
+<div class="">
+  <img src="../../assets/img/espagne.jpg" alt="image Espagne" class="image">
+  <div class="row">
+    <div class="col-8 offset-2 col-md-10 offset-md-1 col-sm-12 col-xs-12 pb-5 mb-5">
+      <h1 class="pt-5 mt-5 center-text pb-5 mb-5">Forfaits vedettes</h1><br>
 
 <div *ngFor="let item of forfaits | forfaitsVedettes">
   <app-forfait-mini [formulaire]="forfaits" [forfait]="item" ></app-forfait-mini>
 </div>
 
-<!--<div *ngFor="let item of forfaits | forfaitRabais">-->
-<!--  <app-forfait [formulaire]="formulaire" [forfait]='item'></app-forfait>-->
-<!--</div>-->
-<!--  <ng-template #elseBlock>Ancun forfait vedette des disponible pour le moment.</ng-template>-->
-
+    </div>
+  </div>
+</div>

@@ -48,17 +48,69 @@ export class GraphiqueDestinationComponent implements OnInit {
       ],
       label: 'Costarica',
       backgroundColor: 'green',
-      borderColor: 'blue',
-      hoverBackgroundColor: 'purple',
+      borderColor: 'purple',
+      hoverBackgroundColor: 'green',
+      hoverBorderColor: 'green',
+    },
+    {
+      data: [
+        { x: 10, y: 10, r: 10 },
+        { x: 15, y: 5, r: 15 },
+        { x: 26, y: 12, r: 23 },
+        { x: 7, y: 8, r: 8 },
+      ],
+      label: 'Portugal',
+      backgroundColor: 'red',
+      borderColor: 'purple',
+      hoverBackgroundColor: 'red',
       hoverBorderColor: 'red',
+    },
+    {
+      data: [
+        { x: 10, y: 10, r: 10 },
+        { x: 15, y: 5, r: 15 },
+        { x: 26, y: 12, r: 23 },
+        { x: 7, y: 8, r: 8 },
+      ],
+      label: 'Angleterre',
+      backgroundColor: 'blue',
+      borderColor: 'purple',
+      hoverBackgroundColor: 'blue',
+      hoverBorderColor: 'blue',
+    },
+    {
+      data: [
+        { x: 10, y: 10, r: 10 },
+        { x: 15, y: 5, r: 15 },
+        { x: 26, y: 12, r: 23 },
+        { x: 7, y: 8, r: 8 },
+      ],
+      label: 'Mexique',
+      backgroundColor: 'purple',
+      borderColor: 'purple',
+      hoverBackgroundColor: 'purple',
+      hoverBorderColor: 'purple',
+    },
+    {
+      data: [
+        { x: 20, y: 5, r: 5 },
+        { x: 15, y: 5, r: 15 },
+        { x: 26, y: 12, r: 23 },
+        { x: 7, y: 8, r: 8 },
+      ],
+      label: 'Corse',
+      backgroundColor: 'yellow',
+      borderColor: 'purple',
+      hoverBackgroundColor: 'yellow',
+      hoverBorderColor: 'yellow',
     },
   ];
 
   public bubbleChartColors: Color[] = [
     {
       backgroundColor: [
-        'red',
         'green',
+        'red',
         'blue',
         'purple',
         'yellow',

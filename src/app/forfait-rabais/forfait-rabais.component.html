@@ -1,3 +1,14 @@
-<div *ngFor="let item of forfaits | forfaitRabais">
-  <app-forfait [formulaire]="formulaire" [forfait]='item'></app-forfait>
+<div class="bg-img">
+
+<img src="../../assets/img/london.jpg" alt="image Portugal" class="image">
+<h1 class="pt-5 mt-5 pb-5 mb-5 center-text">Grandes destinations... à petits prix</h1>
+<div class="row">
+  <div class="col-8 offset-2 col-md-10 offset-md-1 col-sm-12 col-xs-12">
+
+    <div *ngFor="let item of forfaits | forfaitRabais">
+      <app-forfait [formulaire]="formulaire" [forfait]='item'></app-forfait>
+      <br>
+    </div>
+  </div>
+</div>
 </div>

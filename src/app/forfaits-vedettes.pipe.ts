@@ -7,7 +7,9 @@ import { Forfait } from './forfait';
 export class ForfaitsVedettesPipe implements PipeTransform {
 
   transform(forfaits: Forfait[] ): Forfait[] {
-    return forfaits.filter(forfait => forfait.vedette === false);
+  if (forfaits) {
+    return forfaits.filter(forfait => forfait && forfait.vedette === true);
+  }
   }
 
 }

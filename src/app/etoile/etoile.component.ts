@@ -9,7 +9,7 @@ import {ForfaitService} from '../forfait.service';
   styleUrls: ['./etoile.component.css']
 })
 export class EtoileComponent implements OnInit {
-
+  @Input () nombreEtoiles: number;
   forfaits: Forfait[] ;
   @Input() forfait: Forfait;
   @Input() formulaire: Formulaire;

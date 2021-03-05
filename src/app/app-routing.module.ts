@@ -8,7 +8,7 @@ import { ForfaitRabaisComponent } from './forfait-rabais/forfait-rabais.componen
 import { AProposComponent } from './a-propos/a-propos.component';
 import { ListeForfaitComponent } from './liste-forfait/liste-forfait.component';
 import { DialogNewForfaitComponent } from './dialog-new-forfait/dialog-new-forfait.component';
-import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component'
+import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.component';
 
 
 const routes: Routes = [

@@ -1,38 +1,38 @@
 <div class='center' >
 
             <mat-card class='card'>
-                <mat-card-header class="space">
+                <mat-card-header >
                     <div  *ngIf="forfait.vedette">
                         <img mat-card-image src='/assets/img/forfait-vedette.png' class="image-vedette"/>
                     </div>
 
-                <mat-card-title><h1>{{forfait.destination}}</h1> </mat-card-title>
+                <mat-card-title ><h1>{{forfait.destination}}</h1> </mat-card-title>
 
                 </mat-card-header>
 
 
             <br>
 
-                <mat-card-content class=""><p>Ville de départ: {{forfait.villeDepart}}</p>
+                <mat-card-content class="center"><p>Ville de départ: {{forfait.villeDepart}}</p>
                 <p>Date de départ: {{forfait.dateDepart}}</p>
                 <p>Date de retour: {{forfait.dateRetour}}</p></mat-card-content>
             <hr>
 
-                <mat-card-title><h2 class='titre'>Séjour à l'hôtel {{forfait.hotel.nom}}</h2></mat-card-title>
-                <mat-card-subtitle><h3>Adresse: {{forfait.hotel.coordonnees}}</h3></mat-card-subtitle>
+                <mat-card-title><h2 class="pl-3">Séjour à l'hôtel {{forfait.hotel.nom}}</h2></mat-card-title>
+                <mat-card-subtitle class="center"><h3>Adresse: {{forfait.hotel.coordonnees}}</h3></mat-card-subtitle>
             <br>
                 <mat-card-content>
                   <div class="row">
 <div class='flex-column'>
-    <div class='grid-container'>
+    <div class='grid-container center'>
             <span class='grid-item style' *ngFor='let item of [].constructor(forfait.hotel.nombreEtoiles);'>
-            <app-etoile [forfait.hotel.nombreEtoiles]='item'></app-etoile></span>
+            <app-etoile></app-etoile></span>
         </div>
-    <p>Nombre de chambres disponibles: {{forfait.hotel.nombreChambres}}</p>
+    <p class="center mt-5">Nombre de chambres disponibles: {{forfait.hotel.nombreChambres}}</p>
 
     <div>
         <ul >
-            <li *ngFor="let item of forfait.hotel.caracteristiques">
+            <li class="center" *ngFor="let item of forfait.hotel.caracteristiques">
                 <p><span>{{item}}</span></p>
             </li>
         </ul>
@@ -40,14 +40,14 @@
 
 
 <!-- <div [ngStyle]="{'text-decoration:line-through;'}"> -->
-    <div *ngIf="forfait.rabais > 0; else elseBlock">
+    <div class="center" *ngIf="forfait.rabais > 0; else elseBlock">
         <h2 class='barre'>{{forfait.prix}}$</h2>
         <h1 class='rabais'>{{forfait.prix - forfait.rabais}}$</h1>
-        <h2 >Vous épargnez {{forfait.rabais}}$</h2>
+        <h2>Vous épargnez {{forfait.rabais}}$</h2>
 
     </div>
 
-    <ng-template #elseBlock><h1>{{forfait.prix}}$</h1></ng-template>
+    <ng-template  #elseBlock><h1 class="ml-4 pl-4">{{forfait.prix}}$</h1></ng-template>
 </div>
 
                   </div>

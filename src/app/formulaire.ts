@@ -10,5 +10,5 @@ export interface Formulaire {
     dateRetour: string;
     prix: number;
     vedette: boolean;
-    duree: string,
+    duree: string;
 }

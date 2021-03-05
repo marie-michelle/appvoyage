@@ -54,7 +54,7 @@ import { TableauDeBordComponent } from './tableau-de-bord/tableau-de-bord.compon
 import { ChartsModule } from 'ng2-charts';
 import { GraphiqueDestinationComponent } from './graphique-destination/graphique-destination.component';
 import { GraphiquePrixComponent } from './graphique-prix/graphique-prix.component';
-
+import { RechercheForfaitPipe } from './recherche-forfait.pipe';
 
 @NgModule({
   declarations: [
@@ -81,6 +81,7 @@ import { GraphiquePrixComponent } from './graphique-prix/graphique-prix.componen
     TableauDeBordComponent,
     GraphiqueDestinationComponent,
     GraphiquePrixComponent,
+    RechercheForfaitPipe,
   ],
   imports: [
     BrowserModule,

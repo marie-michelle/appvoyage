@@ -1,15 +1,19 @@
-<div class="containerFormRecherche">
+<div class="containerFormRecherche" >
   <h3 class="m-2 p-2">RECHERCHER</h3>
 
   <!-- DESTINATION -->
 
   <mat-form-field appearance="fill" class="margin form">
     <mat-label for="ctrlDestination">Destination</mat-label>
-    <input type=text matInput [matAutocomplete]="CompleteDestination" #valideDestination="ngModel" [(ngModel)]="recherche.destination" (ngModelChange)="changeDestination($event)" placeholder="Ex.: Angleterre" name="ctrlDestination" id="ctrlDestination" required>
+
+    <input type=text matInput [matAutocomplete]="CompleteDestination" #valideDestination="ngModel"
+           [(ngModel)]="recherche.destination" (ngModelChange)="changeDestination($event)"
+           placeholder="Ex.: Angleterre" name="ctrlDestination" id="ctrlDestination" required >
+
     <mat-autocomplete #CompleteDestination="matAutocomplete">
-      <mat-option value="Angleterre">Angleterre</mat-option>
-      <mat-option value="Espagne">Espagne</mat-option>
-      <mat-option value="Portugal">Portugal</mat-option>
+      <mat-option value="Cuba">Cuba</mat-option>
+      <mat-option value="Nicaragua">Nicaragua</mat-option>
+      <mat-option value="Costa Rica">Costa Rica</mat-option>
     </mat-autocomplete>
 
     <mat-error *ngIf="valideDestination.hasError('required')">

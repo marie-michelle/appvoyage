@@ -77,3 +77,11 @@
   margin: 0;
   padding: 0;
 }
+
+
+.bg-img {
+  background-image: url("src/assets/img/avion.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}

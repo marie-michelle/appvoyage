@@ -1,4 +1,3 @@
-<th routerLink='/tableau-bord'><span class="pl-5"><a>TABLEAU DE BORD</a></span></th>
 
 
 <h1 class="center p-2 m-2 ">LISTE DES FORFAITS</h1>
@@ -6,8 +5,10 @@
 <section class="margin form p-2 m-2">
   <div class="pb-4">
     <button matSuffix type="submit" mat-raised-button color="primary" (click)="openDialogNewForfait()"><i class="material-icons">add</i>Ajouter Forfait</button>
+    <button routerLink='/tableau-bord' matSuffix type="submit" mat-stroked-button color="primary" class="ml-4">Tableau de bord</button>
+
   </div>
-  <form #forfaitFormEdition="ngForm" id="forfaitFormDestinationEdition" (ngSubmit)="forfaitFormEdition.form.valid && onEdit(forfaitFormEdition)" name="selectedForfaitDestination">
+  <form #forfaitFormEdition="ngForm" id="forfaitFormEdition" (ngSubmit)="forfaitFormEdition.form.valid && onEdit(forfaitFormEdition)" name="selectedForfaitDestination">
 <table class="pb-5 mb-5" mat-table #tableForfaits [dataSource]="mesForfaits" >
 <!--DESTINATION-->
   <ng-container matColumnDef="destination">
